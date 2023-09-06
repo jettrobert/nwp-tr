@@ -33,7 +33,7 @@ export default function Post({ post }) {
         <link rel="stylesheet" href="https://use.typekit.net/zkz4rdl.css" />
         <div className="logo-container">
           <a href="homepage.html">
-            <img src="/logo-white.png" alt="Home" />
+            <img src="/logo-white.svg" alt="Home" />
           </a>
         </div>
         <div className="blog-post">
