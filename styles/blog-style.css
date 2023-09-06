@@ -1,0 +1,64 @@
+body {
+    background-color: #000;
+    color: white;
+    font-family: "pf-videotext", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blog-post {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.title {
+    font-size: 3em;
+    margin-top: 10vh;
+    text-align: left;
+}
+
+.date {
+    font-size: 1em;
+    margin-top: 1vh;
+    text-align: left;
+}
+
+.cover-photo {
+    width: calc(100% - 2em);
+    margin: 1em;
+}
+
+.markdown-content {
+    margin: 1em 0;
+    /* additional styles for Markdown converted content */
+}
+
+.related-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-box {
+    width: 30%;
+    height: 100px;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.6em;
+    margin-top: 2em;
+}
+
+.logo-container {
+    position: absolute;
+    margin-top: 3em;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Optional, to ensure the logo sits above other elements */
+  }
+  
