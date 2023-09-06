@@ -29,11 +29,11 @@ export default function Post({ post }) {
         <>
         <meta charSet="UTF-8" />
         <title>{post.title}</title>
-        <link rel="stylesheet" href="/styles/blog-style.css" />
+        <link rel="stylesheet" href="/public/blog-style.css" />
         <link rel="stylesheet" href="https://use.typekit.net/zkz4rdl.css" />
         <div className="logo-container">
           <a href="homepage.html">
-            <img src="/blog-template/assets/logo-white.png" alt="Home" />
+            <img src="/public/logo-white.png" alt="Home" />
           </a>
         </div>
         <div className="blog-post">
