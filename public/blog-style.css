@@ -55,9 +55,9 @@ footer {
 
 .logo-container {
     position: absolute;
-    top: 50%;  /* Centered vertically */
-    left: 50%;  /* Centered horizontally */
-    transform: translate(-50%, -50%);  /* Necessary to perfectly center */
+    margin-top: 1.5em;
+    left: 50%;  
+    transform: translate(-50%, -50%);  
     z-index: 10;  /* Optional, to ensure the logo sits above other elements */
 }
 
