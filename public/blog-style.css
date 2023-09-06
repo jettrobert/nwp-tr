@@ -28,8 +28,8 @@ body {
     margin: 1em;
 }
 
-.markdown-content {
-    margin: 1em 0;
+.markdown-content p {
+    margin-bottom: 1.5em;
     /* additional styles for Markdown converted content */
 }
 
