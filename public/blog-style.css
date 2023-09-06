@@ -55,10 +55,11 @@ footer {
 
 .logo-container {
     position: absolute;
-    margin-top: 3em;
-    top: 0;
+    max-width: 20%;
+    max-height: auto;
     left: 50%;
     transform: translateX(-50%);
+    margin: 1em;
     z-index: 10; /* Optional, to ensure the logo sits above other elements */
   }
   
