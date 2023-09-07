@@ -21,6 +21,21 @@ html {
   justify-content: start;
   /* Align the boxes to the left (start) */
   align-items: center;
+
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+.container {
+  scrollbar-width: none;
+}
+
+/* For Internet Explorer */
+.container {
+  -ms-overflow-style: none;
 }
 
 .box {
@@ -28,20 +43,19 @@ html {
   /* Prevent shrinking */
   scroll-snap-align: center;
   /* Snap to this box when scrolling */
-  min-width: 60vw;
-  height: 70vh;
-  width: 70vw;
-  margin-top:15vh;
-  border-radius: 10px;
+  width: 75vw;  /* Same as height */
+  height: 75vw;  /* Same as width */
+  margin-top: 30vh;  /* Adjust this as needed */
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
-  z-index: 1;
+  z-index: 50;
   transition: transform 0.3s ease, opacity 0.3s ease;
   /* Add a transition effect when sliding */
-  transform: scale(0.7);
-  /* Initialize the boxes to 80% scale */
-  opacity: 0.6;
+  transform: scale(0.7);  /* Initialize the boxes to 70% scale */
+  opacity: 0.6;  /* Initial opacity */
 }
+
 
 .box-spacer {
   flex: 0 0 auto;
@@ -75,7 +89,7 @@ html {
   transform: scale(1);
   /* Scale the focused box to full size */
   opacity: 1;
-  box-shadow: 0px 0px 120px 20px #11133f;
+  box-shadow: 0px 0px 100px 40px #11133f;
 }
 
 /* SCROLING TEXT */

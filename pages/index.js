@@ -117,10 +117,6 @@ const MyBlog = ({ posts }) => {
               className="image"
               style={{ backgroundImage: `url(${post.feature_image})` }}
             />
-            <div className="info">
-              <h2 className="title">{post.title}</h2>
-              <p className="date">{new Date(post.published_at).toLocaleDateString()}</p>
-            </div>
           </div>
         ))}
         <div className="box-spacer" />
