@@ -9,6 +9,7 @@ html {
   /* Set the height to 100% of the viewport height */
   background-size: 200% 200%;
   background-color: black;
+  overflow-y: hidden;
 }
 
 .container {
@@ -43,17 +44,48 @@ html {
   /* Prevent shrinking */
   scroll-snap-align: center;
   /* Snap to this box when scrolling */
-  width: 75vw;  /* Same as height */
-  height: 75vw;  /* Same as width */
-  margin-top: 30vh;  /* Adjust this as needed */
+  width: 75vw;
+  /* Same as height */
+  height: 75vw;
+  /* Same as width */
+  margin-top: 30vh;
+  /* Adjust this as needed */
   border-radius: 5px;
   overflow: hidden;
   position: relative;
   z-index: 50;
   transition: transform 0.3s ease, opacity 0.3s ease;
   /* Add a transition effect when sliding */
-  transform: scale(0.7);  /* Initialize the boxes to 70% scale */
-  opacity: 0.6;  /* Initial opacity */
+  transform: scale(0.7);
+  /* Initialize the boxes to 70% scale */
+  opacity: 0.6;
+  /* Initial opacity */
+}
+
+@media (min-width: 768px) {
+
+  /* Adjust the breakpoint as needed */
+  .box {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    height: 60vh;
+    width: 60vh;
+    margin-top: 30vh;
+    bottom: 82px;
+    /* Adjust this as needed */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 50;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Add a transition effect when sliding */
+    transform: scale(0.7);
+    /* Initialize the boxes to 70% scale */
+    opacity: 0.6;
+    /* Initial opacity */
+    align-items: center;
+
+  }
 }
 
 
@@ -62,6 +94,15 @@ html {
   /* Prevent shrinking */
   width: calc((100vw - 75%) / 2);
 }
+
+@media (min-width: 768px) {
+  .box-spacer {
+    flex: 0 0 auto;
+    /* Prevent shrinking */
+    width: calc((100vw - 30%) / 2);
+  }
+}
+
 
 .image {
   width: 100%;
@@ -109,7 +150,7 @@ html {
   display: inline-block;
   white-space: nowrap;
   font-size: 7em;
-  animation: scrollText 40s linear infinite;
+  animation: scrollText 60s linear infinite;
 }
 
 @keyframes scrollText {
@@ -123,12 +164,18 @@ html {
 }
 
 #bottom-logo {
-  position: fixed;  /* Fixed position */
-  bottom: 25px;  /* 10px from the bottom */
-  left: 50%;  /* Centering the logo */
-  transform: translateX(-50%);  /* Ensure true centering by shifting back half of the logo's width */
-  width: 50px;  /* Optional: set the width */
-  height: auto;  /* Optional: height is automatically determined */
+  position: fixed;
+  /* Fixed position */
+  bottom: 25px;
+  /* 10px from the bottom */
+  left: 50%;
+  /* Centering the logo */
+  transform: translateX(-50%);
+  /* Ensure true centering by shifting back half of the logo's width */
+  width: 50px;
+  /* Optional: set the width */
+  height: auto;
+  /* Optional: height is automatically determined */
 }
 
 #time-container {
