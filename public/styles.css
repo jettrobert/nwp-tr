@@ -82,7 +82,7 @@ html {
 
 .scrolling-text-container {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   color: #fff;
