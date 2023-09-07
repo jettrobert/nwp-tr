@@ -1,0 +1,128 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "pf-videotext", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+  /* Set the height to 100% of the viewport height */
+  background-size: 200% 200%;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  overflow-x: scroll;
+  height: 100%;
+  /* Take up all available vertical space */
+  scroll-snap-type: x mandatory;
+  /* Enables smooth scrolling between sections */
+  justify-content: start;
+  /* Align the boxes to the left (start) */
+  align-items: center;
+}
+
+.box {
+  flex: 0 0 auto;
+  /* Prevent shrinking */
+  scroll-snap-align: center;
+  /* Snap to this box when scrolling */
+  min-width: 60vw;
+  height: 70vh;
+  width: 70vw;
+  margin-top:15vh;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* Add a transition effect when sliding */
+  transform: scale(0.7);
+  /* Initialize the boxes to 80% scale */
+  opacity: 0.6;
+}
+
+.box-spacer {
+  flex: 0 0 auto;
+  /* Prevent shrinking */
+  width: calc((100vw - 75%) / 2);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.title,
+.date {
+  margin: 0;
+}
+
+.focused {
+  transform: scale(1);
+  /* Scale the focused box to full size */
+  opacity: 1;
+  box-shadow: 0px 0px 120px 20px #11133f;
+}
+
+/* SCROLING TEXT */
+
+.scrolling-text-container {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  /* optional, set text color */
+  z-index: 1000;
+  /* optional, to ensure the text stays on top */
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 7em;
+  animation: scrollText 40s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#bottom-logo {
+  position: fixed;  /* Fixed position */
+  bottom: 25px;  /* 10px from the bottom */
+  left: 50%;  /* Centering the logo */
+  transform: translateX(-50%);  /* Ensure true centering by shifting back half of the logo's width */
+  width: 50px;  /* Optional: set the width */
+  height: auto;  /* Optional: height is automatically determined */
+}
+
+#time-container {
+  position: inherit;
+  top: 0;
+  margin-top: 1em;
+  color: #fff;
+  font-size: 8px;
+  text-align: center;
+  justify-content: center;
+}
