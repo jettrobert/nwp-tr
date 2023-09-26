@@ -147,6 +147,7 @@ html {
   display: inline-block;
   white-space: nowrap;
   font-size: 7em;
+  margin-top: 22px;
   animation: scrollText 60s linear infinite;
 }
 
@@ -215,7 +216,7 @@ html {
   /* Horizontal centering */
   align-items: center;
   /* Vertical centering */
-  width: 315px;
+  width: 400px;
   /* or another appropriate value */
   margin-top: -110px;
 }
