@@ -106,8 +106,8 @@ const MyBlog = ({ posts }) => {
       </div>
       <div className="scrolling-text-container">
         <div className="scrolling-text">
-          BU NEW WORLD PERSON İÇERİK SERVİSİNİN BİR TESTİDİR. BU SADECE BİR TESTTİR.
-                  </div>
+          NEW WORLD İÇERİK SİSTEMİ'NE HOŞ GELDİNİZ. GELECEK BİZİM. BİZİ INSTAGRAM'DA TAKİP EDİN VE GÜNCEL KALIN.
+        </div>
       </div>
       <div className="container" ref={containerRef}>
         <div className="box-spacer" />
@@ -121,6 +121,21 @@ const MyBlog = ({ posts }) => {
         ))}
         <div className="box-spacer" />
       </div>
+
+      <div id="links-container">
+        <a href="https://www.instagram.com/new_world_person/" target="_blank" rel="noopener noreferrer">
+          INSTAGRAM
+        </a>
+        <span className="divider"> | </span>
+        <a href="https://www.newworldperson.com" target="_blank" rel="noopener noreferrer">
+          BACA DALAM BAHASA LAIN
+        </a>
+        <span className="divider">|</span>
+        <a href="https://www.instagram.com/new_world_person/" target="_blank" rel="noopener noreferrer">
+          BİZİMLE İLETİŞİME GEÇİN
+        </a>
+      </div>
+
       <img id="bottom-logo" src="/logo-white.svg" alt="New World Person" />
     </>
   );
@@ -135,7 +150,7 @@ export async function getStaticProps() {
   try {
     posts = await api.posts.browse({
       limit: 15, // Feel free to adjust the limit
-      filter: 'tags:[tr]' // Only fetch posts with the 'tr' tag
+      filter: 'tags: [en]'
     });
   } catch (error) {
     console.error(error);
