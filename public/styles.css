@@ -59,6 +59,7 @@ html {
   /* Initialize the boxes to 70% scale */
   opacity: 0.6;
   /* Initial opacity */
+  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
