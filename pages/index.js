@@ -128,7 +128,7 @@ const MyBlog = ({ posts }) => {
         </a>
         <span className="divider"> | </span>
         <a href="https://www.newworldperson.com" target="_blank" rel="noopener noreferrer">
-          BACA DALAM BAHASA LAIN
+          DİĞER DİLLERDE OKU
         </a>
         <span className="divider">|</span>
         <a href="https://www.instagram.com/new_world_person/" target="_blank" rel="noopener noreferrer">
